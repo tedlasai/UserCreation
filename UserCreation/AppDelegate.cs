@@ -1,5 +1,10 @@
-﻿using Foundation;
+﻿using System;
+using System.IO;
+using Foundation;
+using SQLite;
 using UIKit;
+using UserCreation.Data;
+
 
 namespace UserCreation
 {
@@ -8,6 +13,20 @@ namespace UserCreation
     [Register("AppDelegate")]
     public class AppDelegate : UIResponder, IUIApplicationDelegate
     {
+        /*static UserDatabase database;
+
+        public static UserDatabase Database
+        {
+            get
+            {
+                if (database == null)
+                {
+                    database = new UserDatabase(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "Users.db3"));
+                }
+                return database;
+            }
+        }
+        */
 
         [Export("window")]
         public UIWindow Window { get; set; }
@@ -17,6 +36,8 @@ namespace UserCreation
         {
             // Override point for customization after application launch.
             // If not required for your application you can safely delete this method
+
+
             return true;
         }
 

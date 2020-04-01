@@ -6,8 +6,12 @@ namespace UserCreation
 {
     public partial class DisplayUserDataViewController : UITableView
     {
-        public DisplayUserDataViewController (IntPtr handle) : base (handle)
+        public DisplayUserDataViewController(IntPtr handle) : base(handle)
         {
+
         }
+
+          
+    
     }
 }

@@ -15,7 +15,7 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="70" width="414" height="826"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <subviews>
@@ -34,7 +34,6 @@
                                 <state key="normal" title="Add User"/>
                                 <connections>
                                     <action selector="AddUserButton_TouchUpInside:" destination="BYZ-38-t0r" id="9297" eventType="touchUpInside"/>
-                                    <segue id="9842" destination="2688" kind="show"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="201" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" placeholder="Password:">
@@ -131,18 +130,33 @@
                         <outlet property="addUserButton" destination="199" id="name-outlet-199"/>
                         <outlet property="usernameNotEmptyIndicator" destination="2230" id="name-outlet-2230"/>
                     </connections>
-                    <navigationItem title="Title" id="10229" key="navigationItem"/>
+                    <navigationItem title="Add User" id="10229" key="navigationItem"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="0.0" y="0.0"/>
+            <point key="canvasLocation" x="731" y="105"/>
         </scene>
         <scene sceneID="2687">
             <objects>
-                <tableViewController id="2688" sceneMemberID="viewController"/>
+                <tableViewController id="2688" sceneMemberID="viewController" customClass="UserTableViewController" title="User List">
+                    <navigationItem title="Users" id="14916" key="navigationItem">
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="15238">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="15237" translatesAutoresizingMaskIntoConstraints="NO" key="customView">
+                                <rect key="frame" x="0.0" y="0.0" width="64" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Add User"/>
+                                <connections>
+                                    <action selector="UIButton15237_TouchUpInside:" destination="2688" id="15239" eventType="touchUpInside"/>
+                                    <segue id="15364" destination="BYZ-38-t0r" kind="show"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO" translucent="NO"/>
+                </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2694" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="614" y="-5"/>
+            <point key="canvasLocation" x="11" y="73"/>
         </scene>
         <scene sceneID="10091">
             <objects>
@@ -152,7 +166,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue id="10230" destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController"/>
+                        <segue id="14917" destination="2688" kind="relationship" relationship="rootViewController"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="10095" userLabel="First Responder" sceneMemberID="firstResponder"/>

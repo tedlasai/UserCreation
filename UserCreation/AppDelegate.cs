@@ -13,7 +13,7 @@ namespace UserCreation
     [Register("AppDelegate")]
     public class AppDelegate : UIResponder, IUIApplicationDelegate
     {
-        /*static UserDatabase database;
+        static UserDatabase database;
 
         public static UserDatabase Database
         {
@@ -26,7 +26,7 @@ namespace UserCreation
                 return database;
             }
         }
-        */
+        
 
         [Export("window")]
         public UIWindow Window { get; set; }

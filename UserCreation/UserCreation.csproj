@@ -150,6 +150,11 @@
         <Compile Include="DisplayUserDataViewController.designer.cs">
           <DependentUpon>DisplayUserDataViewController.cs</DependentUpon>
         </Compile>
+        <Compile Include="UserTableViewController.cs" />
+        <Compile Include="UserTableViewController.designer.cs">
+          <DependentUpon>UserTableViewController.cs</DependentUpon>
+        </Compile>
+        <Compile Include="UserTableSource.cs" />
     </ItemGroup>
     <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
 </Project>

@@ -146,7 +146,6 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Add User"/>
                                 <connections>
-                                    <action selector="UIButton15237_TouchUpInside:" destination="2688" id="15239" eventType="touchUpInside"/>
                                     <segue id="15364" destination="BYZ-38-t0r" kind="show"/>
                                 </connections>
                             </button>

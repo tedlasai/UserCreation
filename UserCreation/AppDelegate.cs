@@ -13,14 +13,19 @@ namespace UserCreation
     [Register("AppDelegate")]
     public class AppDelegate : UIResponder, IUIApplicationDelegate
     {
+
+        //create a database that can be accessed by any class
         static UserDatabase database;
 
+        //create UserDatabase
         public static UserDatabase Database
         {
             get
             {
+                //if database does not already exist then create it
                 if (database == null)
                 {
+                    //create user database in a path where it wont be deleted and call the file Users.db3
                     database = new UserDatabase(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "Users.db3"));
                 }
                 return database;
